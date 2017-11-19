@@ -79,10 +79,16 @@
     <Compile Include="Checkout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerScreen.Designer.vb">
-      <DependentUpon>ManagerScreen.vb</DependentUpon>
+    <Compile Include="AddItemScreen.Designer.vb">
+      <DependentUpon>AddItemScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagerScreen.vb">
+    <Compile Include="AddItemScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteItemScreen.Designer.vb">
+      <DependentUpon>DeleteItemScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteItemScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyCart.Designer.vb">
@@ -124,8 +130,11 @@
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerScreen.resx">
-      <DependentUpon>ManagerScreen.vb</DependentUpon>
+    <EmbeddedResource Include="AddItemScreen.resx">
+      <DependentUpon>AddItemScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteItemScreen.resx">
+      <DependentUpon>DeleteItemScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyCart.resx">
       <DependentUpon>MyCart.vb</DependentUpon>

@@ -23,15 +23,15 @@ Partial Class MainScreen
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.MyCartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManagersScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LabelMAINLOGO = New System.Windows.Forms.Label()
         Me.ButtonTopSellers = New System.Windows.Forms.Button()
         Me.ButtonMovies = New System.Windows.Forms.Button()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
-        Me.LabelSearch = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ButtonSearch = New System.Windows.Forms.Button()
         Me.ButtonTV = New System.Windows.Forms.Button()
         Me.ButtonVideoGames = New System.Windows.Forms.Button()
         Me.DataGridViewMain = New System.Windows.Forms.DataGridView()
@@ -46,6 +46,7 @@ Partial Class MainScreen
         Me.PictureBoxOutOfStock = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBoxCategory = New System.Windows.Forms.TextBox()
+        Me.DeleteItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -55,24 +56,25 @@ Partial Class MainScreen
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MyCartToolStripMenuItem, Me.ManagersScreenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManagersScreenToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1321, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'MyCartToolStripMenuItem
-        '
-        Me.MyCartToolStripMenuItem.Name = "MyCartToolStripMenuItem"
-        Me.MyCartToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.MyCartToolStripMenuItem.Text = "My Cart"
-        '
         'ManagersScreenToolStripMenuItem
         '
+        Me.ManagersScreenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemToolStripMenuItem, Me.DeleteItemToolStripMenuItem})
         Me.ManagersScreenToolStripMenuItem.Name = "ManagersScreenToolStripMenuItem"
         Me.ManagersScreenToolStripMenuItem.Size = New System.Drawing.Size(109, 20)
         Me.ManagersScreenToolStripMenuItem.Text = "Managers Screen"
+        '
+        'AddItemToolStripMenuItem
+        '
+        Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
+        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddItemToolStripMenuItem.Text = "Add Item"
         '
         'LabelMAINLOGO
         '
@@ -108,19 +110,11 @@ Partial Class MainScreen
         '
         'TextBoxSearch
         '
-        Me.TextBoxSearch.Location = New System.Drawing.Point(1096, 144)
+        Me.TextBoxSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxSearch.Location = New System.Drawing.Point(1092, 83)
         Me.TextBoxSearch.Name = "TextBoxSearch"
-        Me.TextBoxSearch.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxSearch.Size = New System.Drawing.Size(100, 29)
         Me.TextBoxSearch.TabIndex = 13
-        '
-        'LabelSearch
-        '
-        Me.LabelSearch.AutoSize = True
-        Me.LabelSearch.Location = New System.Drawing.Point(1046, 151)
-        Me.LabelSearch.Name = "LabelSearch"
-        Me.LabelSearch.Size = New System.Drawing.Size(44, 13)
-        Me.LabelSearch.TabIndex = 14
-        Me.LabelSearch.Text = "Search:"
         '
         'PictureBox1
         '
@@ -136,15 +130,27 @@ Partial Class MainScreen
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GrayText
+        Me.GroupBox1.Controls.Add(Me.ButtonSearch)
         Me.GroupBox1.Controls.Add(Me.ButtonTV)
         Me.GroupBox1.Controls.Add(Me.ButtonVideoGames)
         Me.GroupBox1.Controls.Add(Me.ButtonMovies)
         Me.GroupBox1.Controls.Add(Me.ButtonTopSellers)
+        Me.GroupBox1.Controls.Add(Me.TextBoxSearch)
         Me.GroupBox1.Location = New System.Drawing.Point(0, 24)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1321, 160)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
+        '
+        'ButtonSearch
+        '
+        Me.ButtonSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonSearch.Location = New System.Drawing.Point(1002, 77)
+        Me.ButtonSearch.Name = "ButtonSearch"
+        Me.ButtonSearch.Size = New System.Drawing.Size(84, 42)
+        Me.ButtonSearch.TabIndex = 14
+        Me.ButtonSearch.Text = "Search"
+        Me.ButtonSearch.UseVisualStyleBackColor = True
         '
         'ButtonTV
         '
@@ -176,7 +182,7 @@ Partial Class MainScreen
         '
         'TextBoxPrice
         '
-        Me.TextBoxPrice.Location = New System.Drawing.Point(792, 397)
+        Me.TextBoxPrice.Location = New System.Drawing.Point(819, 377)
         Me.TextBoxPrice.Name = "TextBoxPrice"
         Me.TextBoxPrice.ReadOnly = True
         Me.TextBoxPrice.Size = New System.Drawing.Size(100, 20)
@@ -184,7 +190,7 @@ Partial Class MainScreen
         '
         'TextBoxQuantity
         '
-        Me.TextBoxQuantity.Location = New System.Drawing.Point(792, 371)
+        Me.TextBoxQuantity.Location = New System.Drawing.Point(819, 351)
         Me.TextBoxQuantity.Name = "TextBoxQuantity"
         Me.TextBoxQuantity.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxQuantity.TabIndex = 18
@@ -192,7 +198,7 @@ Partial Class MainScreen
         'LabelQuantity
         '
         Me.LabelQuantity.AutoSize = True
-        Me.LabelQuantity.Location = New System.Drawing.Point(740, 378)
+        Me.LabelQuantity.Location = New System.Drawing.Point(767, 358)
         Me.LabelQuantity.Name = "LabelQuantity"
         Me.LabelQuantity.Size = New System.Drawing.Size(46, 13)
         Me.LabelQuantity.TabIndex = 19
@@ -201,7 +207,7 @@ Partial Class MainScreen
         'LabelPrice
         '
         Me.LabelPrice.AutoSize = True
-        Me.LabelPrice.Location = New System.Drawing.Point(755, 400)
+        Me.LabelPrice.Location = New System.Drawing.Point(782, 380)
         Me.LabelPrice.Name = "LabelPrice"
         Me.LabelPrice.Size = New System.Drawing.Size(31, 13)
         Me.LabelPrice.TabIndex = 20
@@ -219,7 +225,7 @@ Partial Class MainScreen
         '
         'ButtonCheckout
         '
-        Me.ButtonCheckout.Location = New System.Drawing.Point(732, 487)
+        Me.ButtonCheckout.Location = New System.Drawing.Point(765, 417)
         Me.ButtonCheckout.Name = "ButtonCheckout"
         Me.ButtonCheckout.Size = New System.Drawing.Size(187, 44)
         Me.ButtonCheckout.TabIndex = 22
@@ -229,7 +235,7 @@ Partial Class MainScreen
         'LabelGenre
         '
         Me.LabelGenre.AutoSize = True
-        Me.LabelGenre.Location = New System.Drawing.Point(748, 352)
+        Me.LabelGenre.Location = New System.Drawing.Point(775, 332)
         Me.LabelGenre.Name = "LabelGenre"
         Me.LabelGenre.Size = New System.Drawing.Size(36, 13)
         Me.LabelGenre.TabIndex = 24
@@ -237,7 +243,7 @@ Partial Class MainScreen
         '
         'TextBoxGenre
         '
-        Me.TextBoxGenre.Location = New System.Drawing.Point(792, 345)
+        Me.TextBoxGenre.Location = New System.Drawing.Point(819, 325)
         Me.TextBoxGenre.Name = "TextBoxGenre"
         Me.TextBoxGenre.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxGenre.TabIndex = 23
@@ -247,7 +253,7 @@ Partial Class MainScreen
         Me.PictureBoxOutOfStock.BackColor = System.Drawing.Color.Transparent
         Me.PictureBoxOutOfStock.BackgroundImage = Global.Non_Functional_Prototype.My.Resources.Resources.out_of_stock
         Me.PictureBoxOutOfStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBoxOutOfStock.Location = New System.Drawing.Point(687, 190)
+        Me.PictureBoxOutOfStock.Location = New System.Drawing.Point(988, 537)
         Me.PictureBoxOutOfStock.Name = "PictureBoxOutOfStock"
         Me.PictureBoxOutOfStock.Size = New System.Drawing.Size(267, 74)
         Me.PictureBoxOutOfStock.TabIndex = 25
@@ -256,7 +262,7 @@ Partial Class MainScreen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(735, 322)
+        Me.Label1.Location = New System.Drawing.Point(762, 302)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 27
@@ -264,11 +270,17 @@ Partial Class MainScreen
         '
         'TextBoxCategory
         '
-        Me.TextBoxCategory.Location = New System.Drawing.Point(792, 319)
+        Me.TextBoxCategory.Location = New System.Drawing.Point(819, 299)
         Me.TextBoxCategory.Name = "TextBoxCategory"
         Me.TextBoxCategory.ReadOnly = True
         Me.TextBoxCategory.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxCategory.TabIndex = 26
+        '
+        'DeleteItemToolStripMenuItem
+        '
+        Me.DeleteItemToolStripMenuItem.Name = "DeleteItemToolStripMenuItem"
+        Me.DeleteItemToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteItemToolStripMenuItem.Text = "Delete Item"
         '
         'MainScreen
         '
@@ -289,8 +301,6 @@ Partial Class MainScreen
         Me.Controls.Add(Me.TextBoxQuantity)
         Me.Controls.Add(Me.TextBoxPrice)
         Me.Controls.Add(Me.DataGridViewMain)
-        Me.Controls.Add(Me.LabelSearch)
-        Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.LabelMAINLOGO)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -302,6 +312,7 @@ Partial Class MainScreen
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewMain, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxOutOfStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -315,9 +326,7 @@ Partial Class MainScreen
     Friend WithEvents ButtonTopSellers As Button
     Friend WithEvents ButtonMovies As Button
     Friend WithEvents TextBoxSearch As TextBox
-    Friend WithEvents LabelSearch As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents MyCartToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManagersScreenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonTV As Button
     Friend WithEvents ButtonVideoGames As Button
@@ -333,4 +342,7 @@ Partial Class MainScreen
     Friend WithEvents PictureBoxOutOfStock As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBoxCategory As TextBox
+    Friend WithEvents AddItemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ButtonSearch As Button
+    Friend WithEvents DeleteItemToolStripMenuItem As ToolStripMenuItem
 End Class
