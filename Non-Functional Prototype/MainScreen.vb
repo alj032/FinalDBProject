@@ -1,7 +1,6 @@
 ﻿Public Class MainScreen
     Protected db As New db
-    Protected question_id As Integer
-    Protected answer_id As Integer
+
 
 
     Private Sub MyCartToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -12,7 +11,16 @@
         ''MOVIES when we click this we want to fill the DGV with only movies
 
         ''Filling the DGV below is just a test for now
-        db.sql = "SELECT * FROM Items"
+        db.sql = "SELECT Title, 
+		                [Year],
+		                Quantity,
+		                Price,
+		                Times_Rented,
+		                Category,
+		                Rating
+                         
+                   From Item
+                   Where Category = 'Movie'"
         db.fill(DataGridViewMain)
 
     End Sub
@@ -20,19 +28,53 @@
         ''VIDEO GAMES 
 
         ''Fill DGV
-        db.sql = "SELECT * FROM Items"
+        db.sql = "SELECT Title,
+		                Quantity,
+		                Price,
+		                Times_Rented,
+		                Category,
+		                Rating,
+		                [Platform],
+		                Developers,
+		                Publisher
+
+
+                    From Item
+                    Where Category = 'Video Game'"
         db.fill(DataGridViewMain)
     End Sub
     Private Sub ButtonTV_Click(sender As Object, e As EventArgs) Handles ButtonTV.Click
         ''TV 
 
         ''Fill DGV
-        db.sql = "SELECT * FROM Items"
+        db.sql = "SELECT Title,
+		                Quantity,
+		                Price,
+		                Times_Rented, 
+		                Category,
+		                Rating
+
+		
+
+
+                    From Item
+                    Where Category = 'TV Show'"
         db.fill(DataGridViewMain)
     End Sub
     Private Sub ButtonTopSellers_Click(sender As Object, e As EventArgs) Handles ButtonTopSellers.Click
         ''TOP SELLERS
-        db.sql = "SELECT * FROM Items"
+        db.sql = "SELECT top(10) Title,
+		                        Quantity,
+		                        Price,
+		                        Times_Rented, 
+		                        Category,
+		                        Rating
+
+		
+
+
+                 From Item
+                 Order by Times_Rented Desc"
         db.fill(DataGridViewMain)
     End Sub
 

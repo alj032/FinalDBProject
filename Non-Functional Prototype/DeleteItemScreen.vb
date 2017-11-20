@@ -1,4 +1,16 @@
 ﻿Public Class DeleteItemScreen
+    Protected db As New db
+
+    Private Sub DeleteItemScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''Form Loading up
+
+        ''Fill DataGridView
+        db.sql = "SELECT *	From Item"
+        db.fill(DataGridView1)
+
+
+
+    End Sub
     Private Sub ButtonEnable_Click(sender As Object, e As EventArgs) Handles ButtonEnable.Click
         ''what happens when we enable editing mode
 
@@ -27,4 +39,6 @@
 
 
     End Sub
+
+
 End Class

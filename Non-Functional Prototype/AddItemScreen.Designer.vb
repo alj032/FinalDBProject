@@ -193,7 +193,7 @@ Partial Class AddItemScreen
         Me.Button2.Text = "Refresh"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'ManagerScreen
+        'AddItemScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -217,7 +217,7 @@ Partial Class AddItemScreen
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "ManagerScreen"
+        Me.Name = "AddItemScreen"
         Me.Text = "ManagerScreen"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
