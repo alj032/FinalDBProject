@@ -35,7 +35,7 @@ Partial Class MyCart
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ButtonCheckout = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,15 +157,15 @@ Partial Class MyCart
         Me.Button2.Text = "Remove Selected Item"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ButtonCheckout
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(372, 436)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(204, 52)
-        Me.Button3.TabIndex = 13
-        Me.Button3.Text = "Checkout All Items"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ButtonCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonCheckout.Location = New System.Drawing.Point(372, 436)
+        Me.ButtonCheckout.Name = "ButtonCheckout"
+        Me.ButtonCheckout.Size = New System.Drawing.Size(204, 52)
+        Me.ButtonCheckout.TabIndex = 13
+        Me.ButtonCheckout.Text = "Checkout All Items"
+        Me.ButtonCheckout.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -192,7 +192,7 @@ Partial Class MyCart
         Me.ClientSize = New System.Drawing.Size(815, 524)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.ButtonCheckout)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
@@ -226,7 +226,7 @@ Partial Class MyCart
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ButtonCheckout As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox3 As TextBox
 End Class
