@@ -25,6 +25,7 @@ Partial Class MainScreen
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ManagersScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemsCheckedOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LabelMAINLOGO = New System.Windows.Forms.Label()
         Me.ButtonTopSellers = New System.Windows.Forms.Button()
         Me.ButtonMovies = New System.Windows.Forms.Button()
@@ -33,8 +34,6 @@ Partial Class MainScreen
         Me.ButtonVideoGames = New System.Windows.Forms.Button()
         Me.DataGridViewMain = New System.Windows.Forms.DataGridView()
         Me.TextBoxPrice = New System.Windows.Forms.TextBox()
-        Me.TextBoxQuantity = New System.Windows.Forms.TextBox()
-        Me.LabelQuantity = New System.Windows.Forms.Label()
         Me.LabelPrice = New System.Windows.Forms.Label()
         Me.LabelMovieTite = New System.Windows.Forms.Label()
         Me.ButtonCheckout = New System.Windows.Forms.Button()
@@ -42,6 +41,8 @@ Partial Class MainScreen
         Me.TextBoxCategory = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBoxRating = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBoxCustID = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +59,7 @@ Partial Class MainScreen
         '
         'ManagersScreenToolStripMenuItem
         '
-        Me.ManagersScreenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteItemToolStripMenuItem})
+        Me.ManagersScreenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteItemToolStripMenuItem, Me.ItemsCheckedOutToolStripMenuItem})
         Me.ManagersScreenToolStripMenuItem.Name = "ManagersScreenToolStripMenuItem"
         Me.ManagersScreenToolStripMenuItem.Size = New System.Drawing.Size(109, 20)
         Me.ManagersScreenToolStripMenuItem.Text = "Managers Screen"
@@ -66,8 +67,14 @@ Partial Class MainScreen
         'DeleteItemToolStripMenuItem
         '
         Me.DeleteItemToolStripMenuItem.Name = "DeleteItemToolStripMenuItem"
-        Me.DeleteItemToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.DeleteItemToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.DeleteItemToolStripMenuItem.Text = "Manage Inventory"
+        '
+        'ItemsCheckedOutToolStripMenuItem
+        '
+        Me.ItemsCheckedOutToolStripMenuItem.Name = "ItemsCheckedOutToolStripMenuItem"
+        Me.ItemsCheckedOutToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ItemsCheckedOutToolStripMenuItem.Text = "Items Checked Out"
         '
         'LabelMAINLOGO
         '
@@ -144,32 +151,16 @@ Partial Class MainScreen
         '
         'TextBoxPrice
         '
-        Me.TextBoxPrice.Location = New System.Drawing.Point(1063, 389)
+        Me.TextBoxPrice.Location = New System.Drawing.Point(953, 310)
         Me.TextBoxPrice.Name = "TextBoxPrice"
         Me.TextBoxPrice.ReadOnly = True
         Me.TextBoxPrice.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxPrice.TabIndex = 17
         '
-        'TextBoxQuantity
-        '
-        Me.TextBoxQuantity.Location = New System.Drawing.Point(1063, 363)
-        Me.TextBoxQuantity.Name = "TextBoxQuantity"
-        Me.TextBoxQuantity.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxQuantity.TabIndex = 18
-        '
-        'LabelQuantity
-        '
-        Me.LabelQuantity.AutoSize = True
-        Me.LabelQuantity.Location = New System.Drawing.Point(1011, 370)
-        Me.LabelQuantity.Name = "LabelQuantity"
-        Me.LabelQuantity.Size = New System.Drawing.Size(46, 13)
-        Me.LabelQuantity.TabIndex = 19
-        Me.LabelQuantity.Text = "Quantity"
-        '
         'LabelPrice
         '
         Me.LabelPrice.AutoSize = True
-        Me.LabelPrice.Location = New System.Drawing.Point(1026, 392)
+        Me.LabelPrice.Location = New System.Drawing.Point(916, 313)
         Me.LabelPrice.Name = "LabelPrice"
         Me.LabelPrice.Size = New System.Drawing.Size(31, 13)
         Me.LabelPrice.TabIndex = 20
@@ -179,7 +170,7 @@ Partial Class MainScreen
         '
         Me.LabelMovieTite.AutoSize = True
         Me.LabelMovieTite.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMovieTite.Location = New System.Drawing.Point(1003, 285)
+        Me.LabelMovieTite.Location = New System.Drawing.Point(932, 246)
         Me.LabelMovieTite.Name = "LabelMovieTite"
         Me.LabelMovieTite.Size = New System.Drawing.Size(101, 24)
         Me.LabelMovieTite.TabIndex = 21
@@ -188,7 +179,7 @@ Partial Class MainScreen
         '
         'ButtonCheckout
         '
-        Me.ButtonCheckout.Location = New System.Drawing.Point(1007, 482)
+        Me.ButtonCheckout.Location = New System.Drawing.Point(899, 508)
         Me.ButtonCheckout.Name = "ButtonCheckout"
         Me.ButtonCheckout.Size = New System.Drawing.Size(187, 44)
         Me.ButtonCheckout.TabIndex = 22
@@ -198,7 +189,7 @@ Partial Class MainScreen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1006, 340)
+        Me.Label1.Location = New System.Drawing.Point(896, 287)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 27
@@ -206,7 +197,7 @@ Partial Class MainScreen
         '
         'TextBoxCategory
         '
-        Me.TextBoxCategory.Location = New System.Drawing.Point(1063, 337)
+        Me.TextBoxCategory.Location = New System.Drawing.Point(953, 284)
         Me.TextBoxCategory.Name = "TextBoxCategory"
         Me.TextBoxCategory.ReadOnly = True
         Me.TextBoxCategory.Size = New System.Drawing.Size(100, 20)
@@ -215,7 +206,7 @@ Partial Class MainScreen
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(1019, 418)
+        Me.Label3.Location = New System.Drawing.Point(909, 339)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 30
@@ -223,10 +214,26 @@ Partial Class MainScreen
         '
         'TextBoxRating
         '
-        Me.TextBoxRating.Location = New System.Drawing.Point(1063, 415)
+        Me.TextBoxRating.Location = New System.Drawing.Point(953, 336)
         Me.TextBoxRating.Name = "TextBoxRating"
         Me.TextBoxRating.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxRating.TabIndex = 29
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(900, 485)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(68, 13)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Cutsomer ID:"
+        '
+        'TextBoxCustID
+        '
+        Me.TextBoxCustID.Location = New System.Drawing.Point(972, 482)
+        Me.TextBoxCustID.Name = "TextBoxCustID"
+        Me.TextBoxCustID.Size = New System.Drawing.Size(114, 20)
+        Me.TextBoxCustID.TabIndex = 31
         '
         'MainScreen
         '
@@ -235,6 +242,8 @@ Partial Class MainScreen
         Me.BackgroundImage = Global.Non_Functional_Prototype.My.Resources.Resources.MainScreenBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1321, 623)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBoxCustID)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBoxRating)
         Me.Controls.Add(Me.Label1)
@@ -242,8 +251,6 @@ Partial Class MainScreen
         Me.Controls.Add(Me.ButtonCheckout)
         Me.Controls.Add(Me.LabelMovieTite)
         Me.Controls.Add(Me.LabelPrice)
-        Me.Controls.Add(Me.LabelQuantity)
-        Me.Controls.Add(Me.TextBoxQuantity)
         Me.Controls.Add(Me.TextBoxPrice)
         Me.Controls.Add(Me.DataGridViewMain)
         Me.Controls.Add(Me.LabelMAINLOGO)
@@ -271,8 +278,6 @@ Partial Class MainScreen
     Friend WithEvents ButtonVideoGames As Button
     Friend WithEvents DataGridViewMain As DataGridView
     Friend WithEvents TextBoxPrice As TextBox
-    Friend WithEvents TextBoxQuantity As TextBox
-    Friend WithEvents LabelQuantity As Label
     Friend WithEvents LabelPrice As Label
     Friend WithEvents LabelMovieTite As Label
     Friend WithEvents ButtonCheckout As Button
@@ -281,4 +286,7 @@ Partial Class MainScreen
     Friend WithEvents DeleteItemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBoxRating As TextBox
+    Friend WithEvents ItemsCheckedOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBoxCustID As TextBox
 End Class

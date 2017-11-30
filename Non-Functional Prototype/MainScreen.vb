@@ -9,15 +9,13 @@
 
 
     End Sub
-    Private Sub MyCartToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        MyCart.Show()
-    End Sub
+
 
     Private Sub ButtonMovies_Click(sender As Object, e As EventArgs) Handles ButtonMovies.Click
         ''MOVIES when we click this we want to fill the DGV with only movies
 
         ''Filling the DGV below is just a test for now
-        db.sql = "SELECT Title, Category, Price, Rating, Quantity From Movies"
+        db.sql = "Select Title, Category, Price, Rating, Item_ID from Items Where Category = 'Movie'"
         db.fill(DataGridViewMain)
 
     End Sub
@@ -25,25 +23,25 @@
         ''VIDEO GAMES 
 
         ''Fill DGV
-        db.sql = "SELECT Title, Category, Price, Rating, Quantity From Video_Games"
+        db.sql = "Select Title, Category, Price, Rating, Item_ID from Items Where Category = 'Video Game'"
         db.fill(DataGridViewMain)
     End Sub
     Private Sub ButtonTV_Click(sender As Object, e As EventArgs) Handles ButtonTV.Click
         ''TV 
 
         ''Fill DGV
-        db.sql = "SELECT Title, Category, Price, Rating, Quantity From TV_Shows"
+        db.sql = "Select Title, Category, Price, Rating, Item_ID from Items Where Category = 'TV Show'"
         db.fill(DataGridViewMain)
     End Sub
     Private Sub ButtonTopSellers_Click(sender As Object, e As EventArgs) Handles ButtonTopSellers.Click
         ''TOP SELLERS
-        db.sql = "SELECT top(10) Title, Category, Price, Rating, Quantity, Times_Rented
+        db.sql = "SELECT top(10) Title, Category, Price, Rating, Item_ID
 
 		
 
 
-                 From Item
-                 Order by Times_Rented Desc"
+                 From Items
+                 Order by Rating DESC"
         db.fill(DataGridViewMain)
     End Sub
 
@@ -52,8 +50,12 @@
 
 
     Private Sub ButtonCheckout_Click(sender As Object, e As EventArgs) Handles ButtonCheckout.Click
-        ''Shows MyCart Form where user needs to enter information to checkout.
-        MyCart.Show()
+
+        db.sql = "INSERT INTO Checkout (Customer_ID, Item_ID) VALUES (@CustID, @Item_ID)"
+        db.bind("@CustID", TextBoxCustID.Text)
+        db.bind("@Item_ID", DataGridViewMain.SelectedRows(0).Cells(4).Value)
+        db.execute()
+
     End Sub
 
     Private Sub DataGridViewMain_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMain.CellClick
@@ -66,7 +68,7 @@
             TextBoxCategory.Text = DataGridViewMain.SelectedRows(0).Cells(1).Value
             TextBoxPrice.Text = DataGridViewMain.SelectedRows(0).Cells(2).Value
             TextBoxRating.Text = DataGridViewMain.SelectedRows(0).Cells(3).Value
-            TextBoxQuantity.Text = DataGridViewMain.SelectedRows(0).Cells(4).Value
+
 
         End If
 
@@ -98,20 +100,9 @@
     Private Sub DeleteItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteItemToolStripMenuItem.Click
         ManageInventoryScreen.Show()
     End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
+    Private Sub ItemsCheckedOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItemsCheckedOutToolStripMenuItem.Click
+        Checkout.Show()
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxRating.TextChanged
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
 End Class

@@ -30,12 +30,8 @@ Partial Class ManageInventoryScreen
         Me.TextBoxYear = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBoxPrice = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBoxQuantity = New System.Windows.Forms.TextBox()
         Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxTimesRented = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBoxRating = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -83,7 +79,7 @@ Partial Class ManageInventoryScreen
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(426, 401)
+        Me.Label12.Location = New System.Drawing.Point(411, 398)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(29, 13)
         Me.Label12.TabIndex = 48
@@ -91,7 +87,7 @@ Partial Class ManageInventoryScreen
         '
         'TextBoxYear
         '
-        Me.TextBoxYear.Location = New System.Drawing.Point(463, 398)
+        Me.TextBoxYear.Location = New System.Drawing.Point(448, 395)
         Me.TextBoxYear.Name = "TextBoxYear"
         Me.TextBoxYear.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxYear.TabIndex = 47
@@ -99,7 +95,7 @@ Partial Class ManageInventoryScreen
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(232, 398)
+        Me.Label10.Location = New System.Drawing.Point(241, 398)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(31, 13)
         Me.Label10.TabIndex = 42
@@ -107,26 +103,10 @@ Partial Class ManageInventoryScreen
         '
         'TextBoxPrice
         '
-        Me.TextBoxPrice.Location = New System.Drawing.Point(269, 395)
+        Me.TextBoxPrice.Location = New System.Drawing.Point(278, 395)
         Me.TextBoxPrice.Name = "TextBoxPrice"
         Me.TextBoxPrice.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxPrice.TabIndex = 41
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(217, 442)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(46, 13)
-        Me.Label11.TabIndex = 40
-        Me.Label11.Text = "Quantity"
-        '
-        'TextBoxQuantity
-        '
-        Me.TextBoxQuantity.Location = New System.Drawing.Point(269, 439)
-        Me.TextBoxQuantity.Name = "TextBoxQuantity"
-        Me.TextBoxQuantity.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxQuantity.TabIndex = 39
         '
         'ComboBoxCategory
         '
@@ -146,27 +126,10 @@ Partial Class ManageInventoryScreen
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "Category"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(384, 443)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 13)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Times Rented"
-        '
-        'TextBoxTimesRented
-        '
-        Me.TextBoxTimesRented.Location = New System.Drawing.Point(463, 440)
-        Me.TextBoxTimesRented.Name = "TextBoxTimesRented"
-        Me.TextBoxTimesRented.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxTimesRented.TabIndex = 35
-        Me.TextBoxTimesRented.Text = "0"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(587, 440)
+        Me.Label3.Location = New System.Drawing.Point(234, 444)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 32
@@ -174,7 +137,7 @@ Partial Class ManageInventoryScreen
         '
         'TextBoxRating
         '
-        Me.TextBoxRating.Location = New System.Drawing.Point(631, 437)
+        Me.TextBoxRating.Location = New System.Drawing.Point(278, 441)
         Me.TextBoxRating.Name = "TextBoxRating"
         Me.TextBoxRating.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxRating.TabIndex = 31
@@ -226,12 +189,8 @@ Partial Class ManageInventoryScreen
         Me.Controls.Add(Me.TextBoxYear)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBoxPrice)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBoxQuantity)
         Me.Controls.Add(Me.ComboBoxCategory)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBoxTimesRented)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBoxRating)
         Me.Controls.Add(Me.Label1)
@@ -256,12 +215,8 @@ Partial Class ManageInventoryScreen
     Friend WithEvents TextBoxYear As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBoxPrice As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TextBoxQuantity As TextBox
     Friend WithEvents ComboBoxCategory As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBoxTimesRented As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBoxRating As TextBox
     Friend WithEvents Label1 As Label
