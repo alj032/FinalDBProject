@@ -104,5 +104,7 @@
         Checkout.Show()
     End Sub
 
-
+    Private Sub SalesDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalesDataToolStripMenuItem.Click
+        SalesData.Show()
+    End Sub
 End Class

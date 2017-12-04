@@ -26,6 +26,7 @@ Partial Class MainScreen
         Me.ManagersScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ItemsCheckedOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalesDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LabelMAINLOGO = New System.Windows.Forms.Label()
         Me.ButtonTopSellers = New System.Windows.Forms.Button()
         Me.ButtonMovies = New System.Windows.Forms.Button()
@@ -43,7 +44,6 @@ Partial Class MainScreen
         Me.TextBoxRating = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxCustID = New System.Windows.Forms.TextBox()
-        Me.SalesDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +76,12 @@ Partial Class MainScreen
         Me.ItemsCheckedOutToolStripMenuItem.Name = "ItemsCheckedOutToolStripMenuItem"
         Me.ItemsCheckedOutToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.ItemsCheckedOutToolStripMenuItem.Text = "Items Checked Out"
+        '
+        'SalesDataToolStripMenuItem
+        '
+        Me.SalesDataToolStripMenuItem.Name = "SalesDataToolStripMenuItem"
+        Me.SalesDataToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.SalesDataToolStripMenuItem.Text = "Sales Data"
         '
         'LabelMAINLOGO
         '
@@ -235,12 +241,6 @@ Partial Class MainScreen
         Me.TextBoxCustID.Name = "TextBoxCustID"
         Me.TextBoxCustID.Size = New System.Drawing.Size(114, 20)
         Me.TextBoxCustID.TabIndex = 31
-        '
-        'SalesDataToolStripMenuItem
-        '
-        Me.SalesDataToolStripMenuItem.Name = "SalesDataToolStripMenuItem"
-        Me.SalesDataToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
-        Me.SalesDataToolStripMenuItem.Text = "Sales Data"
         '
         'MainScreen
         '

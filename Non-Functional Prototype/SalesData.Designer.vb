@@ -26,6 +26,7 @@ Partial Class SalesData
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ButtonLoad = New System.Windows.Forms.Button()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,15 +36,24 @@ Partial Class SalesData
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(85, 68)
+        Me.Chart1.Location = New System.Drawing.Point(12, 12)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
+        Series1.Name = "Year VS Sales"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(300, 300)
+        Me.Chart1.Size = New System.Drawing.Size(915, 528)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
+        '
+        'ButtonLoad
+        '
+        Me.ButtonLoad.Location = New System.Drawing.Point(933, 252)
+        Me.ButtonLoad.Name = "ButtonLoad"
+        Me.ButtonLoad.Size = New System.Drawing.Size(104, 50)
+        Me.ButtonLoad.TabIndex = 1
+        Me.ButtonLoad.Text = "Load"
+        Me.ButtonLoad.UseVisualStyleBackColor = True
         '
         'SalesData
         '
@@ -52,6 +62,7 @@ Partial Class SalesData
         Me.BackgroundImage = Global.Non_Functional_Prototype.My.Resources.Resources.MainScreenBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1049, 552)
+        Me.Controls.Add(Me.ButtonLoad)
         Me.Controls.Add(Me.Chart1)
         Me.Name = "SalesData"
         Me.Text = "Sales Data"
@@ -61,4 +72,5 @@ Partial Class SalesData
     End Sub
 
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents ButtonLoad As Button
 End Class
