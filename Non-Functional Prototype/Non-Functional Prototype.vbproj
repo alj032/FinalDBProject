@@ -52,6 +52,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +78,12 @@
       <DependentUpon>Checkout.vb</DependentUpon>
     </Compile>
     <Compile Include="Checkout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesData.Designer.vb">
+      <DependentUpon>SalesData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesData.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageInventory.Designer.vb">
@@ -138,6 +145,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesData.resx">
+      <DependentUpon>SalesData.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

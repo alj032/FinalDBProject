@@ -43,6 +43,7 @@ Partial Class MainScreen
         Me.TextBoxRating = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxCustID = New System.Windows.Forms.TextBox()
+        Me.SalesDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +60,7 @@ Partial Class MainScreen
         '
         'ManagersScreenToolStripMenuItem
         '
-        Me.ManagersScreenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteItemToolStripMenuItem, Me.ItemsCheckedOutToolStripMenuItem})
+        Me.ManagersScreenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteItemToolStripMenuItem, Me.ItemsCheckedOutToolStripMenuItem, Me.SalesDataToolStripMenuItem})
         Me.ManagersScreenToolStripMenuItem.Name = "ManagersScreenToolStripMenuItem"
         Me.ManagersScreenToolStripMenuItem.Size = New System.Drawing.Size(109, 20)
         Me.ManagersScreenToolStripMenuItem.Text = "Managers Screen"
@@ -235,6 +236,12 @@ Partial Class MainScreen
         Me.TextBoxCustID.Size = New System.Drawing.Size(114, 20)
         Me.TextBoxCustID.TabIndex = 31
         '
+        'SalesDataToolStripMenuItem
+        '
+        Me.SalesDataToolStripMenuItem.Name = "SalesDataToolStripMenuItem"
+        Me.SalesDataToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.SalesDataToolStripMenuItem.Text = "Sales Data"
+        '
         'MainScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,4 +296,5 @@ Partial Class MainScreen
     Friend WithEvents ItemsCheckedOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxCustID As TextBox
+    Friend WithEvents SalesDataToolStripMenuItem As ToolStripMenuItem
 End Class

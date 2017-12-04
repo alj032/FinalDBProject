@@ -25,7 +25,7 @@ Partial Class ManageInventoryScreen
         Me.DataGridViewDelete = New System.Windows.Forms.DataGridView()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonDelete = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBoxYear = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -67,14 +67,14 @@ Partial Class ManageInventoryScreen
         Me.ButtonDelete.Text = "Delete Item"
         Me.ButtonDelete.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonRefresh
         '
-        Me.Button1.Location = New System.Drawing.Point(775, 242)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 58)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonRefresh.Location = New System.Drawing.Point(775, 242)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(146, 58)
+        Me.ButtonRefresh.TabIndex = 5
+        Me.ButtonRefresh.Text = "Refresh"
+        Me.ButtonRefresh.UseVisualStyleBackColor = True
         '
         'Label12
         '
@@ -195,7 +195,7 @@ Partial Class ManageInventoryScreen
         Me.Controls.Add(Me.TextBoxRating)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBoxTitle)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.ButtonDelete)
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.DataGridViewDelete)
@@ -210,7 +210,7 @@ Partial Class ManageInventoryScreen
     Friend WithEvents DataGridViewDelete As DataGridView
     Friend WithEvents ButtonUpdate As Button
     Friend WithEvents ButtonDelete As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonRefresh As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBoxYear As TextBox
     Friend WithEvents Label10 As Label
