@@ -74,14 +74,7 @@
 
 
 
-        ''What happens when the user clicks on a cell in the datagrid view
 
-        ''If e.RowIndex >= 0 Then
-
-        ''Dim row As DataGridViewRow
-        ''row = Me.DataGridViewMain.Rows(e.RowIndex)
-        ''Setting the textbox equal to their matching row.
-        ''https://www.youtube.com/watch?v=m8syCe8Uamk
 
 
         ''End If
